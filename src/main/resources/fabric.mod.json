@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "dencra-utils",
+	"version": "${version}",
+	"name": "DENCRA Utils",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/dencra-utils/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.gnct25s.DENCRAUtils"
+		],
+		"client": [
+			"com.gnct25s.DENCRAUtilsClient"
+		]
+	},
+	"mixins": [
+		"dencra-utils.mixins.json",
+		{
+			"config": "dencra-utils.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-permissions-api-v0": "*"
+	}
+}
